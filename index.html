@@ -2,24 +2,33 @@
 <html>
   <head>
     <style type="text/css">
-      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+        body{
+            background-color: green;
+        }
     </style>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js">
+     <script type="text/javascript">
+         function showgrumpy-cat()
+         {
+
+             document.getElementById('grumpyCat').style.visability = "visible";
+         }
+         function hidegrumpy-cat()
+         {
+
+             document.getElementById('grumpyCat').style.visability = "hidden";
+         }
     </script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: { lat: 41.184672, lng: -77.265408},
-          zoom: 8
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+
   </head>
+
   <body>
-<div id="map-canvas"></div>
+  <img id="grumpyCat" style = "width:200px; height:200px; visibility:hidden;" src = "http://www.freeallimages.com/wp-content/uploads/2014/09/grumpy-cat-no-1.jpg"/>
+
+<div id="map-canvas">
+
+  </div>
+  Do you want to build a snowman?
+<button onclick="change()">Yes!</button>
+
   </body>
 </html>
