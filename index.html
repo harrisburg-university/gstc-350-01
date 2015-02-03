@@ -6,27 +6,30 @@
             background-color: green;
         }
     </style>
-     <script type="text/javascript">
-         function showgrumpy-cat()
-         {
+     <script type="text/javascript">}
+       function change()
+       {
+         // Get the image elemtn.
+         var imgElement = document.getElementById('grumpyCat');
 
-             document.getElementById('grumpyCat').style.visability = "visible";
+         if (imgElement.style.visibility == 'visible') {
+           // The image is already visible, lets hide it.
+           imgElement.style.visibility = 'hidden'
+         } else {
+           // The image is already hidden, lets show it.
+           imgElement.style.visibility = 'visible';
          }
-         function hidegrumpy-cat()
-         {
 
-             document.getElementById('grumpyCat').style.visability = "hidden";
-         }
+
+
+       }
     </script>
 
   </head>
 
   <body>
-  <img id="grumpyCat" style = "width:200px; height:200px; visibility:hidden;" src = "http://www.freeallimages.com/wp-content/uploads/2014/09/grumpy-cat-no-1.jpg"/>
+  <img id="grumpyCat" style="width:200px; height:200px; visibility:hidden" src = "http://www.freeallimages.com/wp-content/uploads/2014/09/grumpy-cat-no-1.jpg"/>
 
-<div id="map-canvas">
-
-  </div>
   Do you want to build a snowman?
 <button onclick="change()">Yes!</button>
 
