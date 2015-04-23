@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="">
+
+
+<head>
+    <style>
+        body {
+            background-color: #b0c4de;
+        }
+    </style>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <!--The viewport meta tag is used to improve the presentation and behavior of the samples
+      on iOS devices-->
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1,user-scalable=no">
+
+    <title>Final Project</title>
+
+    <link rel="stylesheet"
+          href="http://js.arcgis.com/3.12/esri/css/esri.css"/>
+
+    <link rel="stylesheet" href="styles.css"/>
+
+
+    <script src="http://js.arcgis.com/3.12/"></script>
+    <script>
+        /*
+         Final Project Requirements:
+         1) A map using ArcGIS javascript API.
+         2) The map must point to at least one of your' own map services.
+         3) The map service should be pointed to a database.
+         4) The map should have some interactive feature in it (drawing or buttons to turn layer on/off, etc).
+         5) Be creative.
+         **/
+        var map;
+        require([
+                    "esri/map",
+                    "esri/layers/FeatureLayer",
+                    "esri/geometry/Point",
+                    "dojo/domReady!"
+                ],
+                function (Map, FeatureLayer, Point) {
+                    map = new Map("mapDiv", {
+                        basemap: "osm",
+                        center: [-77.0000,40.3385073],
+                        zoom: 7
+
+                    });
+                    // Create a new layer and add that layer to the map.
+                    var lyr = new FeatureLayer("http://dev.tsstools.com/arcgis/rest/services/hu/hu2/MapServer/0");
+                    map.addLayer(lyr);
+                    window.goToLatLon= function(lat,lon){
+                        var point = new Point(lon,lat);
+                        map.centerAndZoom(point, 14);
+                    }
+                });
+    </script>
+    <style> background-color:lightblue
+    </style>
+</head>
+
+
+<body>
+
+<center><header><h1><b>The Meta Project: A look back of all my GIS Classes<h1><b></header></center>
+
+<div id="mapDiv"></div>
+
+<footer>
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+    <button onclick="goToLatLon(40.74,-77.32)">GIS I Final Project </button>
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+    <button onclick="goToLatLon(39.97,-76.84)">GIS II Final Project </button>
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+    <button onclick="goToLatLon(31.26,-81.60)">GIS III Final Project </button>
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+    <button onclick="goToLatLon(39.37,-76.06)">GIS IV Final Project </button>
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+    <button onclick="goToLatLon(40.00,-76.85)">High School Internship </button>
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+    <button onclick="goToLatLon(40.27,-76.88)">Cartography Final Project </button>
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+    <button onclick="goToLatLon(67.26,-159.96)">Applied Geospatial Technology Final Project </button>
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+    <button onclick="goToLatLon(40.29,-76.69)">Project I </button>
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click" />
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click" />
+    </div>
+
+    <div style="text-align: center">
+        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="89px" OnClick="btnSubmit_Click"/>
+        <div class="divider"/>
+        <asp:Button ID="btnClear" runat="server" Text="Clear" Width="89px" OnClick="btnClear_Click"/>
+        <button onclick="goToLatLon(38.96,-78.19)">Remote Sensing Final Project</button> <div>
+
+
+
+
+
+        <p>
+
+
+
+          I've have took GIS classes since High School as there offered at Dover Area High School. And this Project Is a
+        cap all to
+        project's I've completed thus far. My GIS I project was completed in 2009 as a Freshman in high school and the
+        project was to create
+        a simple map to locate all baseball teams in Pennsylvania.
+       <br>
+            <br>
+
+
+    For my GIS II which was taken during the Fall of 2009 project I created a address locator for my home school district after finding out the maps they were using were 15 years old and the school district grown a lot since then.
+            <br>
+            <br>
+        For My GIS III project we had to write a letter to a county outside Pennsyvania where PASDA wouldn't exist so I decided to write to Glynn County GA which includes Jekyell Island a favorite beach of our family. I did this project in the Spring of 2010.
+        <br>
+            <br>
+        For My GIS IV project I had to run a Remote Sensing Application of Betterton Beach in Maryland. I took this in the Fall of 2011.
+        <br>
+            <br>
+        For My High School Internship this was and extention of my GIS II project but instead included the whole district. Done in during the whole 2011-2012 School Year.
+        <br>
+            After taking a year off from GIS I was assigned to work with NRG to map there Steam System. This was done in the Fall of 2013
+        <br>
+        <br>
+            My Applied Geospatial Project stemmed from the idea of contacting a random county and doing a project that they needed done and after contacting like 10 counties the one to respond was Northwest Artic Borough who wanted me to find data for them and located there bear popuation.
+        <br>
+        <br>
+        During the Summer of 2014 I was a intern for Tri-County Regional Planning Commission and I was projectless and had no ideas for my Project I so I asked my boss what projects do you have to complete and he gave a project to update there Anderson Landuse/Landcover Layer and shown is the township that I did (South Hanover Twp).
+        <br>
+        <br>
+        For my Remote Sensing Project I was assigned to figure out a least cost path to add an Interstate to pararell I-66 shown is Front Royal where the least-cost was supposed to start.
+            <p>
+
+
+</footer>
+
+
+</body>
+</html>
